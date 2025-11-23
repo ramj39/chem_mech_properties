@@ -4,4 +4,4 @@ numpy
 matplotlib
 plotly
 math
-periodic table 
+#periodic table 
