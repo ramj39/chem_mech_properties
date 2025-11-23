@@ -8,7 +8,7 @@ st.markdown(
     """
     <style>
     body, .stApp {
-        background: linear-gradient(135deg, #b3ffab 0%, #12fff7 100%);
+        background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
         min-height: 100vh;
         background-attachment: fixed;
     }
@@ -16,7 +16,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 # Set page configuration
 st.set_page_config(
     page_title="Metallurgical Properties Calculator",
