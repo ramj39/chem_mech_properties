@@ -3,5 +3,6 @@ pandas
 numpy
 matplotlib
 plotly
-math
-#periodic table 
+seaborn
+periodictable
+mendeleev
