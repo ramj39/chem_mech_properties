@@ -1,18 +1,5 @@
 import streamlit as st
 from mendeleev import element
-st.markdown(
-    """
-    <style>
-    body, .stApp {
-        background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%,#fad0c4 100%);
-        min-height: 100vh;
-        background-attachment: fixed;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 st.title("🔍 Element QueryBot")
 
 # User input
