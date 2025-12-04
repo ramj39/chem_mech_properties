@@ -686,7 +686,7 @@ def microstructure_analysis():
             cleanliness = "Contaminated"
         
         st.write(f"*Steel Cleanliness:* {cleanliness}")
-
+st.snow()
 # Add information section
 def add_info_section():
     st.sidebar.markdown("---")
@@ -707,4 +707,5 @@ st.snow()
 if __name__ == "__main__":
     add_info_section()
     main()
+
 
