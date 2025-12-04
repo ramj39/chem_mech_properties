@@ -86,7 +86,9 @@ if prompt:
                 "content": f"Error processing input: {str(e)}"
             })
 
+st.markdown("[link to mechanical properties app](https://chemmechproperties-erezo94sxmepiyasroci6g.streamlit.app/)")
 st.snow()
 st.write("developed by Subramanian Ramajayam")
 #st.snow()
+
 
