@@ -1,5 +1,7 @@
 streamlit
 rdkit-pypi==2022.9.5
+pillow
+py3Dmol
 pandas
 numpy
 matplotlib
@@ -7,5 +9,6 @@ plotly
 seaborn
 periodictable
 mendeleev
+
 
 
