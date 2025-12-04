@@ -29,3 +29,4 @@ if query:
 
     except Exception as e:
         st.error(f"Could not find data for '{query}'. Try a valid element name or symbol.")
+st.balloons()
