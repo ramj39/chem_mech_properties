@@ -1,4 +1,5 @@
 streamlit
+rdkit
 pandas
 numpy
 matplotlib
@@ -6,3 +7,4 @@ plotly
 seaborn
 periodictable
 mendeleev
+
