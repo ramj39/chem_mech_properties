@@ -30,5 +30,7 @@ if query:
     except Exception as e:
         st.error(f"Could not find data for '{query}'. Try a valid element name or symbol.")
 st.markdown("[link to chat app](https://chemmechproperties-a6fatcyidt9brgbwxhuem9.streamlit.app/)")
+st.write("developed by Subramanian Ramajayam")
 st.balloons()
+
 
