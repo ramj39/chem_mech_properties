@@ -686,6 +686,8 @@ def microstructure_analysis():
             cleanliness = "Contaminated"
         
         st.write(f"*Steel Cleanliness:* {cleanliness}")
+st.markdown("[link to elements properties querybot](https://chemmechproperties-pfevqcexjw5dfmejqrxb8l.streamlit.app/)")
+st.write("developed by Subramanian Ramajayam")
 st.snow()
 # Add information section
 def add_info_section():
@@ -701,11 +703,12 @@ def add_info_section():
     - Material selection
     - Microstructure analysis
     """)
-st.markdown("[link to elements properties querybot](https://chemmechproperties-pfevqcexjw5dfmejqrxb8l.streamlit.app/)")
-st.write("developed by Subramanian Ramajayam")
-st.snow()
+#st.markdown("[link to elements properties querybot](https://chemmechproperties-pfevqcexjw5dfmejqrxb8l.streamlit.app/)")
+#st.write("developed by Subramanian Ramajayam")
+#st.snow()
 if __name__ == "__main__":
     add_info_section()
     main()
+
 
 
