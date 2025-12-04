@@ -86,5 +86,7 @@ if prompt:
                 "content": f"Error processing input: {str(e)}"
             })
 
-st.write("developed by Subramanian Ramajayam")
 st.snow()
+st.write("developed by Subramanian Ramajayam")
+#st.snow()
+
