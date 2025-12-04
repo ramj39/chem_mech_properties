@@ -19,7 +19,16 @@ def calculate_properties(mol):
         st.error(f"Error calculating properties: {str(e)}")
         return None
 
-# Initialize chat history if not exists
+def show_3d_structure(mol):
+    """Render 3D structure using py3Dmol"""
+    mb = Chem.MolToMolBlock(mol)
+    viewer = py3Dmol.view(width=400, height=400)
+    viewer.addModel(mb, "mol")
+    viewer.setStyle({"stick": {}})
+    viewer.zoomTo()
+    return viewer
+
+# Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
@@ -32,41 +41,40 @@ for message in st.session_state.messages:
 prompt = st.chat_input("Enter SMILES or ask a question")
 
 if prompt:
-    # Add user message to chat
     st.chat_message("user").write(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
-    # Try to parse as SMILES first
     try:
         mol = Chem.MolFromSmiles(prompt)
 
         if mol is not None:
-            # Its a valid SMILES string
             with st.chat_message("assistant"):
                 st.write("Molecule parsed successfully!")
 
-                # Display structure
+                # 2D structure
                 img = Draw.MolToImage(mol)
                 st.image(img, width=400)
 
-                # Calculate and display properties
+                # Properties
                 props = calculate_properties(mol)
                 if props:
                     for name, value in props.items():
                         st.write(f"**{name}:** {value:.2f}")
 
-                # Save assistant response
+                # 3D structure
+                viewer = show_3d_structure(mol)
+                st.components.v1.html(viewer.render(), height=400)
+
                 st.session_state.messages.append({
                     "role": "assistant",
-                    "content": "Molecular structure and properties displayed"
+                    "content": "Molecular structure (2D + 3D) and properties displayed"
                 })
 
         else:
-            # Handle as a regular question
             with st.chat_message("assistant"):
                 st.write("Invalid SMILES string. Please enter a valid SMILES or ask a chemistry question.")
                 st.session_state.messages.append({
-                    "role": "assistant", 
+                    "role": "assistant",
                     "content": "Invalid SMILES string. Please enter a valid SMILES or ask a chemistry question."
                 })
 
