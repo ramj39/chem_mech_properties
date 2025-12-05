@@ -688,6 +688,7 @@ def microstructure_analysis():
         st.write(f"*Steel Cleanliness:* {cleanliness}")
 st.markdown("[link to elements properties querybot](https://chemmechproperties-pfevqcexjw5dfmejqrxb8l.streamlit.app/)")
 st.write("developed by Subramanian Ramajayam")
+st.markdown("[link to sqc app](https://app-vmzxbywln7bemeilhxuz5a.streamlit.app/)")
 st.snow()
 # Add information section
 def add_info_section():
@@ -709,6 +710,7 @@ def add_info_section():
 if __name__ == "__main__":
     add_info_section()
     main()
+
 
 
 
